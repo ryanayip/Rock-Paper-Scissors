@@ -10,7 +10,13 @@ function computerPlay() {
         
 }
 
-function playRound(playerSelection = prompt("Select Rock, Paper, or Scissors"),computerSelection = computerPlay()) {
+
+function playRound(playerSelection,computerSelection) {
+
+    playerSelection = prompt("Type Rock, Paper, or Scissors")
+    computerSelection = computerPlay()
+    
+
     //I Pick Rock
     if (playerSelection == "Rock" && computerSelection == "Paper") {
         return "You Lose! Paper covers Rock.";
@@ -37,6 +43,24 @@ function playRound(playerSelection = prompt("Select Rock, Paper, or Scissors"),c
     }
 
 }
+
+
+function game() {
+
+    playerSelection = prompt("Type Rock, Paper, or Scissors")
+    computerSelection = computerPlay()
+
+    
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection))
+
+
+
+}
+
 
 
 

@@ -6,8 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <button id="rckBtn">Rock</button>
+    <button id="paperBtn">Paper</button>
+    <button id="scsBtn">Scissors</button>
+    <div class="results">
+
+
+    </div>
     
+    <script>
+        const rockbtn = document.querySelector("#rckBtn");
+        const pprbtn = document.querySelector("#paperBtn");
+        const scsbtn = document.querySelector("#scsBtn");
+        const computerSelection = computerPlay()
+        const resultsDisplay = document.querySelector(".results")
+
+        //resultsDisplay.textContent = "Penis!"
+
+
+        function rockChoice() {
+            playRound("Rock", computerSelection);
+        }
+        function paperChoice() {
+            playRound("Paper", computerSelection);
+        }
+        function scissorChoice() {
+            playRound("Scissors", computerSelection);
+        }
+        rockbtn.addEventListener("click", rockChoice);
+        pprbtn.addEventListener("click", paperChoice);
+        scsbtn.addEventListener("click", scissorChoice);
+
+
+    </script>
 </body>
 </html>

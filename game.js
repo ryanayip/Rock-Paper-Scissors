@@ -14,45 +14,46 @@ let yourScore = 0
 let computerScore = 0
 let roundCounter = 0
 
-function playRound(playerSelection,computerSelection) {
+function playRound(playerSelection, computerSelection) {
 
-    playerSelection = prompt("Type Rock, Paper, or Scissors")
-    computerSelection = computerPlay()
     
+    computerSelection = computerPlay()
+
 
     //I Pick Rock
     if (playerSelection == "Rock" && computerSelection == "Paper") {
         ++computerScore
-        return "You Lose! Paper covers Rock.";
+        resultsDisplay.textContent = "You Lose! Paper covers Rock.";
     } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
         ++yourScore 
-        return "You Win! Rock crushes Scissors.";
+        resultsDisplay.textContent = "You Win! Rock crushes Scissors.";
     } else if (playerSelection == "Rock" && computerSelection == "Rock") {
-        return "You both picked Rock, so it's a tie. How Boring"; 
+        resultsDisplay.textContent = "You both picked Rock, so it's a tie. How Boring"; 
     }
     //I Pick Paper
       else if (playerSelection == "Paper" && computerSelection == "Paper") {
-        return "You both picked Paper, so it's a tie.";
+        resultsDisplay.textContent = "You both picked Paper, so it's a tie.";
     } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
         ++computerScore
-        return "You Lose! Scissors slices through Paper.";
+        resultsDisplay.textContent = "You Lose! Scissors slices through Paper.";
     } else if (playerSelection == "Paper" && computerSelection === "Rock") {
         ++yourScore
-        return "You Win! Paper covers Rock.";
+        resultsDisplay.textContent = "You Win! Paper covers Rock.";
     }
     //I Pick Scissors
       else if (playerSelection == "Scissors" && computerSelection == "Paper") {
         ++yourScore
-        return "You Win! Scissors slices through Paper.";
+        resultsDisplay.textContent = "You Win! Scissors slices through Paper.";
     } else if (playerSelection == "Scissors" && computerSelection == "Scissors") {
-        return "You both picked Scissors, so it's a tie!";
+        resultsDisplay.textContent = "You both picked Scissors, so it's a tie!";
     } else {
         ++computerScore
-        return "You Lose! Rock crushes Scissors";
+        resultsDisplay.textContent = "You Lose! Rock crushes Scissors";
     }
 
     
 }
+
 
 
 function game() {

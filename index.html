@@ -10,22 +10,24 @@
 </head>
 <body>
 
+
+    <div class="results">
+        Click an option to play!  
+    </div>
+    <div class="runningScore">
+        Player : 0 Computer : 0
+    </div>
     <button id="rckBtn">Rock</button>
     <button id="paperBtn">Paper</button>
     <button id="scsBtn">Scissors</button>
-    <div class="results">
 
-
-    </div>
-    
     <script>
         const rockbtn = document.querySelector("#rckBtn");
         const pprbtn = document.querySelector("#paperBtn");
         const scsbtn = document.querySelector("#scsBtn");
-        const computerSelection = computerPlay()
-        const resultsDisplay = document.querySelector(".results")
-
-        //resultsDisplay.textContent = "Penis!"
+        const computerSelection = computerPlay();
+        const resultsDisplay = document.querySelector(".results");
+        const runningScore = document.querySelector(".runningScore")
 
 
         function rockChoice() {

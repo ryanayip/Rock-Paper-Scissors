@@ -50,7 +50,8 @@ function playRound(playerSelection, computerSelection) {
         ++computerScore
         resultsDisplay.textContent = "You Lose! Rock crushes Scissors";
     }
-
+    
+    runningScore.textContent = `Player : ${yourScore} Computer : ${computerScore}`
     
 }
 

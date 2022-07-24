@@ -19,6 +19,17 @@ function playRound(playerSelection, computerSelection) {
     
     computerSelection = computerPlay()
 
+    if (yourScore == "5") {
+        playerWon()
+    }
+
+    if (computerScore == "5") {
+        computerWon()
+    }
+
+    if (yourScore == "5" || computerScore == "5") {
+        return
+    }
 
     //I Pick Rock
     if (playerSelection == "Rock" && computerSelection == "Paper") {
@@ -52,9 +63,21 @@ function playRound(playerSelection, computerSelection) {
     }
     
     runningScore.textContent = `Player : ${yourScore} Computer : ${computerScore}`
+
+    
     
 }
 
+function playerWon() {
+    resultsDisplay.textContent = "Congratulations, you won!";
+    return;
+    
+}
+
+function computerWon() {
+    resultsDisplay.textContent = "Oof, you lost. Better luck next time!"
+    return;
+}
 
 
 function game() {

@@ -7,6 +7,7 @@
     <title>Rock Paper Scissors</title>
     <script src="game.js"></script>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -17,9 +18,12 @@
     <div class="runningScore">
         Player : 0 Computer : 0
     </div>
+
+    <div class="buttons">
     <button id="rckBtn">Rock</button>
     <button id="paperBtn">Paper</button>
     <button id="scsBtn">Scissors</button>
+    </div>
 
     <script>
         const rockbtn = document.querySelector("#rckBtn");
@@ -27,8 +31,8 @@
         const scsbtn = document.querySelector("#scsBtn");
         const computerSelection = computerPlay();
         const resultsDisplay = document.querySelector(".results");
-        const runningScore = document.querySelector(".runningScore")
-
+        const runningScore = document.querySelector(".runningScore");
+        const buttonsArea = document.querySelector(".buttons");
 
         function rockChoice() {
             playRound("Rock", computerSelection);

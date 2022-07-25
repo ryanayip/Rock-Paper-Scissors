@@ -20,15 +20,18 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = computerPlay()
 
     if (yourScore == "5") {
-        playerWon()
+        playerWon();
     }
 
     if (computerScore == "5") {
-        computerWon()
+        computerWon();
+    
     }
 
     if (yourScore == "5" || computerScore == "5") {
-        return
+        return;
+
+
     }
 
     //I Pick Rock
@@ -70,15 +73,30 @@ function playRound(playerSelection, computerSelection) {
 
 function playerWon() {
     resultsDisplay.textContent = "Congratulations, you won!";
+
+    const button = document.createElement('button');
+    button.innerText = 'Play Again?' ;   
+    button.addEventListener('click', () => {
+        window.location.reload();
+      })
+    buttonsArea.textContent = ""
+    document.body.appendChild(button);
     return;
-    
+
 }
 
 function computerWon() {
     resultsDisplay.textContent = "Oof, you lost. Better luck next time!"
+    const button = document.createElement('button');
+    button.innerText = 'Play Again?' ;   
+    button.addEventListener('click', () => {
+        window.location.reload();
+      })
+    buttonsArea.textContent = ""
+
+    document.body.appendChild(button);
     return;
 }
-
 
 function game() {
 
